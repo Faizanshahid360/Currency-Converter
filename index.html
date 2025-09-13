@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pO4+1iYQe8J2hx+1HwQvL0oH+qLRzdyIsmsfX4u7E67a9k8W9NqrbvQlO+SmGVWj+K3xSA8X7x1F9tB+XfJp2g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <div class="container">
+    <h2>Currency Converter</h2>
+    <form id="converter-form">
+      <div class="amount">
+        <p>Enter Amount</p>
+        <input type="number" id="amount" value="100" />
+      </div>
+
+      <div class="dropdown">
+        <div class="from">
+          <p>From</p>
+          <div class="select-container">
+            <img id="from-flag" src="https://flagsapi.com/US/flat/64.png" alt="">
+            <select id="from-currency">
+              <option value="USD" selected>USD</option>
+              <option value="PKR">PKR</option>
+              <option value="EUR">EUR</option>
+              <option value="AUD">AUD</option>
+            </select>
+          </div>
+        </div>
+
+        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+        <div class="to">
+          <p>To</p>
+          <div class="select-container">
+            <img id="to-flag" src="https://flagsapi.com/PK/flat/64.png" alt="">
+            <select id="to-currency">
+              <option value="USD">USD</option>
+              <option value="PKR" selected>PKR</option>
+              <option value="EUR">EUR</option>
+              <option value="AUD">AUD</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg" id="result">1 USD = 283 PKR</div>
+      <button type="submit">Get Exchange Rate</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
